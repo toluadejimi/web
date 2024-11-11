@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHMLAB - Ultimate Solution For WebHosting Billing And Management</title>
+  <!-- favicon -->
+  <link rel="icon" href="assets/images/favicon.png" sizes="16x16" type="image/png" />
+  <!-- bootstrap 5  -->
+  <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+  <!-- fontawesome 5  -->
+  <link rel="stylesheet" href="assets/css/lib/font-awesome.css" />
+  <!-- lineawesome font -->
+  <link rel="stylesheet" href="assets/css/lib/line-awesome.css" />
+  <!-- Simplebar Js  -->
+  <link rel="stylesheet" href="assets/css/lib/simplebar.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#docNav" data-bs-offset="50">
+
+
+  <header class="mobile-header">
+    <div class="container">
+      <div class="row g-4 align-items-center justify-content-between">
+        <div class="col-6">
+          <!-- Logo  -->
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+          </a>
+          <!-- Logo End -->
+        </div>
+        <div class="col-6">
+          <div class="text-end">
+            <button type="button" class="btn btn--sqr sidebar-toggler">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="doc">
+    <div class="doc__sidebar" id="docNav">
+      <div class="doc-logo">
+        <!-- Logo  -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+        </a>
+        <!-- Logo End -->
+      </div>
+      <nav class="doc-nav" data-simplebar>
+        <ul class="list doc-nav__list">
+          <li>
+            <a href="#introduction" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="lar la-clone"></i> <span
+                  class="d-block">introduction</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-req" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-server"></i> <span class="d-block">server
+                  requirements</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-faq" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-question"></i> <span
+                  class="d-block">server FAQ</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#installation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-cog"></i> <span class="d-block">how to
+                  install </span></span> </a>
+          </li>
+          <li>
+            <a href="#activation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-check-circle"></i> <span
+                  class="d-block">how to activate </span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#folder" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-folder"></i> <span class="d-block">
+                  folder structure
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#admin-dashboard" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-home"></i>
+                <span class="d-block">
+                  admin dahshboard
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#system-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-cogs"></i>
+                <span class="d-block">
+                  System Setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-clients" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-users"></i>
+                <span class="d-block">Manage Clients</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#payments" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-money-bill"></i>
+                <span class="d-block">
+                  Payment
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#payment-gateways" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-credit-card"></i>
+                <span class="d-block">
+                  Payment Gateways
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#support-tickets" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-ticket-alt"></i>
+                <span class="d-block">
+                  Support Ticket
+                </span>
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#reports" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-th-list"></i>
+                <span class="d-block">
+                  Report
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#subscribers" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-thumbs-up"></i>
+                <span class="d-block">
+                  Subscribers
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#genearal-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-life-ring"></i>
+                <span class="d-block">
+                  general setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#logo-favicon" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-images"></i>
+                <span class="d-block">
+                  Logo & Favicon
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#system-config" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-cog"></i>
+                <span class="d-block">
+                  System configuration
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#kyc-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-user-check"></i>
+                <span class="d-block">
+                  KYC Setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#extensions" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-cogs"></i>
+                <span class="d-block">
+                  extensions
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#language-manager" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-language"></i>
+                <span class="d-block">
+                  language manager
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#seo-manager" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-globe-asia"></i>
+                <span class="d-block">
+                  seo manager
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#notification-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-bell"></i>
+                <span class="d-block">
+                  Notification Setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-section" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-html5"></i>
+                <span class="d-block">
+                  Manage Section
+                </span>
+              </span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <div class="copyright">
+        <p class="m-0 text--white px-3 text-center">Copyright © <a href="https://viserlab.com/"
+            class="t-link t-link--canvas">ViserLab</a> 2023</p>
+      </div>
+    </div>
+    <div class="doc__body">
+      <div id="introduction" class="section--sm section--first">
+        <div class="list">
+          <div class="doc-head">
+            <div class="doc-head__content">
+              <h5 class="doc-head__title">WHMLAB</h5>
+              <span class="doc-head__sub-title">
+                Ultimate Solution For WebHosting Billing And Management
+              </span>
+            </div>
+          </div>
+          <div class="doc-body">
+            <ul class="list" style="--gap: 0.2rem">
+              <li><strong>Created :</strong> 09-02-2023</li>
+              <li>
+                <strong>By :</strong>
+                <a href="https://codecanyon.net/user/viserlab" class="t-link">Viserlab</a>
+              </li>
+              <li><strong>Email :</strong> <a class="t-link" href="mailto:support@viserlab.com">support@viserlab.com</a>
+              </li>
+            </ul>
+
+            <p class="mt-4 lg-text mb-1">
+              <strong>WHMLAB</strong> is a web hosting management and billing software. 
+              It provides an all-in-one solution for automating various aspects of a web hosting business. 
+              <br />
+              Overall, WHMLAB is a comprehensive solution for automating and streamlining the operations of a web hosting company.
+            </p>
+
+            <p class="mt-4 lg-text">
+              This documentation will help to understand the total system and we have tried to summarize the total.
+            </p>
+
+            <h5 class="mt-3">Key Features</h5>
+            <ul>
+              <li>Complete Hosting Billing Automation</li>
+              <li>Multiple Domain Registrar</li> 
+              <li>Cpanel Integration with Auto Provision</li> 
+              <li>Configurable Options</li>
+              <li>Sell Domain, Hosting, Server, and Products</li>
+              <li>Manage Servers and Server Groups</li>
+              <li>Automation Errors, Cancellation Requests, and more</li>
+            </ul>
+
+            <p class="mt-4 lg-text">
+              The documentation will help to understand the total system and we have tried to summarize the total.
+            </p>
+            <blockquote class="blockquote text--accent">
+              If needed, we will update this script continuously and come with new features and security patches. We
+              will try to give the best user experience to all of our clients.
+            </blockquote>
+            <p class="mt-4 lg-text">
+              Thank you for purchasing <strong>WHMLAB</strong>. If you have any questions or queries that are not
+              answered in this document, please feel free to contact us via email. We will try to respond to you as soon
+              as possible. Thank you so much.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="server-req" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server Requirements</h5>
+                  <span class="doc-head__sub-title">
+                    All server requirements are stated bellow
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-4">
+                  <div class="doc-body">
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>PHP Version 8.1</li>
+                      <li>MySQL Version 5.7+ or MariaDB version 10.2+</li>
+                      <li>BCMath PHP Extension</li>
+                      <li>Ctype PHP Extension</li>
+                      <li>cURL PHP Extension</li>
+                      <li>DOM PHP Extension</li>
+                      <li>Fileinfo PHP Extension</li>
+                      <li>GD PHP Extension</li>
+                      <li>JSON PHP Extension</li>
+                      <li>Mbstring PHP Extension</li>
+                      <li>OpenSSL PHP Extension</li>
+                      <li>PCRE PHP Extension</li>
+                      <li>PDO PHP Extension</li>
+                      <li>pdo_mysql PHP Extension</li>
+                      <li>Tokenizer PHP Extension</li>
+                      <li>XML PHP Extension</li>
+                      <li>allow_url_fopen()</li>
+                      <li>file_get_contents()</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-8">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/server.png" alt="image" class="img-fluid w-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="server-faq" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server FAQ</h5>
+                  <span class="doc-head__sub-title">
+                    Frequently Asked Questions About Server
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do I need VPS or a Dedicated server to run this system?
+                    </p>
+                    <p class="m-0">
+                      No, You can run this system in a shared host as well and it will run smoothly. But if you have
+                      much traffic, you may need to upgrade your server/hosting. Our codes are highly optimized to
+                      ensure the best possible performance.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Which hosting provider should I choose for this? Do you have any suggestions?
+                    </p>
+                    <p class="m-0">
+                      You can choose any hosting provider that provides cPanel-based hosting. cPanel is not a must, but
+                      we recommend you to have cPanel-based hosting.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      I don't have cPanel, What should I do?
+                    </p>
+                    <p class="m-0">
+                      Nothing to worry about, Our system will work with any control panel but cPanel is easy to manage,
+                      for that we recommend cPanel-based hosting. Also, Our free Support is limited to cPanel-based
+                      hosting only.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do you provide hosting as well?
+                    </p>
+                    <p class="m-0">
+                      Yes, We do. We can provide a complete solution for your hosting. We can provide <a class="t-link"
+                        href="https://viserlab.com/hosting/budget" target="_blank">budget shared hosting</a>, <a
+                        class="t-link" href="https://viserlab.com/hosting/premium" target="_blank">premium shared
+                        hosting</a>, <a class="t-link" href="https://viserlab.com/hosting/vps" target="_blank">VPS</a>,
+                      <a class="t-link" href="https://viserlab.com/hosting/dedicated" target="_blank">Dedicated
+                        servers</a>, and Cluster from various geolocation. Please contact us for more details.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="installation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Installation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Installation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-6">
+                  <div class="doc-body">
+                    <p class="lead">
+                      Installation is very easy with our Easy Installer. You can install yourself simply in few steps
+                      without any coding knowledge. We develop our installation system to make the installation process
+                      flawless and easy.
+                    </p>
+                    <p class="xl-text fw-md">Installation Steps:</p>
+                    <ul class="list list--base">
+                      <li>
+                        <p class="m-0">
+                          Upload the whole file to the server you have downloaded from download after purchase.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          Extract/Unzip the file and move all files in the <code>Files</code> folder to the main
+                          folder(where you want to install it). Make sure you have moved the <code>index.php</code> and
+                          <code>.htaccess</code> as well.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">Now please browse http://<code>your-site-url</code>/install/index.php and follow
+                          the process. Your system should be ready to use.
+                        </p>
+                      </li>
+                    </ul>
+
+                    <p class="xl-text mt-4">
+                      If you are still unable to install the system, please contact us. we offer free installation in
+                      cPanel-based hosting.
+                    </p>
+                    <p class="xl-text fw-md mb-2">Admin Login:</p>
+                    <ul class="list" style="--gap: 0.2rem">
+                      <li>
+                        <span class="d-block">Admin login URL is:
+                          <strong>
+                            http://<code>your-site-url</code>/admin</strong>
+                        </span>
+                      </li>
+                      <li>
+                        <strong>Username :</strong> [as_you_set_on_installation]
+                      </li>
+                      <li>
+                        <strong>Password :</strong> [as_you_set_on_installation]
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/installation.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="activation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Activation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Activation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row g-4">
+            <div class="col-xl-6">
+              <div class="doc-body h-auto">
+                <p>
+                  After installing the system you need to activate it. When you visit the system, you will be able to
+                  see the activation page. Just provide this information to activate and run your system. Your provided
+                  information will send to ViserLab server to verify and we never collect any sensitive or confidential
+                  data.
+                </p>
+                <ul class="list list--base" style="--gap: 0.5rem">
+                  <li>
+                    <p class="m-0">
+                      <strong>Purchase Code:</strong> To get purchase code <a
+                        href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-"
+                        target="_blank">Click Here</a>.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Envato Username:</strong> Your Envato username with which you bought system.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Email:</strong> Provide your email for further communication.
+                    </p>
+                  </li>
+                </ul>
+                <p class="mt-5">
+                  <code>The purchase code(license) is for one website or domain only. Please activate the license into the correct domain(URL) to avoid any unwanted issues in the future.</code>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="doc-body--alt t-center">
+                <img src="assets/images/activation.jpg" alt="image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="folder" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Folder Structure</h5>
+                  <span class="doc-head__sub-title">
+                    Application Folder Details
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="doc-body">
+                <p class="lead">
+                  After installation, There will be two folders and two files will be in your main folder.
+                </p>
+                <ul class="list" style="--gap: 0.3rem">
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">assets</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">core</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">.htaccess</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">index.php</span>
+                    </span>
+                  </li>
+                </ul>
+                <ul class="list list--base mt-4">
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"assets" </strong> folder, We keep all
+                      kinds of assets like <strong>CSS, JS, Images</strong>. If
+                      you want To edit or change anything over CSS or js, please
+                      have a look at this folder.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"core"</strong> folder, We keep the core of
+                      Laravel and we maintain full MVC structure on this
+                      project.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="admin-dashboard" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Admin Dashboard</h5>
+                  <span class="doc-head__sub-title"> Dashboard Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+
+                    <p>
+                      From the <strong>Dashboard</strong> menu, you will get an overview at a glance. You may know about
+                      the clients' info, orders & invoices. Also, you may see the order statistics in the chart.
+                    </p>
+
+                    <p>
+                      You'll see a popup window here about the cron-job instruction. You need to configure cron job
+                      commands given on that window on your server to automation.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/dashboard.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="system-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">System Setting</h5>
+                  <span class="doc-head__sub-title"> System Setting Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+
+                    <p>
+                      The System Settings in <strong>WHMLAB</strong> refer to the configuration options and settings that control the overall behavior and functionality of the platform. This includes settings related to general behavior, products and services, payment gateways, notification templates, servers, server groups, order, invoices, and more.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/system_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-clients" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Manage Clients</h5>
+                  <span class="doc-head__sub-title"> Mange Clients Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Clients refer to the account holder of your system. Clients are able to make deposits and payment invoice into their dashboard.
+                    </p>
+
+                    <p>
+                      From the Manage Clients menu, you can see the clients list of Active Clients, Banned Clients, Email
+                      Unverified Clients, Mobile Unverified Clients, KYC Unverified Clients, and KYC Pending Clients. You can
+                      manage your clients like update their information, notifying them, viewing their login history, and
+                      banning them from the system from their details page. Also, you can send notifications to all
+                      clients or to a specific client.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_users.png" alt="image" class="img-fluid">
+                  </div>
+                </div>
+
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      On the client details page you can get an Overview of the client info like balance, payment amount, how many transaction, how many orders,
+                      how many doamins, and more.
+                    </p>
+
+                    <p>
+                      Admin is able to update the client information and can add/subtract balance, view login history, ban
+                      the clients from this details page, and see the documents submitted by the user for KYC
+                      verification.
+                    </p>
+
+                    <p>
+                      <b>Email Verification: </b> If email verification is unverified then a
+                      verification
+                      code will be sent to the client's email if he/she tries to log in and need to be verified by that
+                      code.
+
+                      <br>
+                      <br>
+
+                      <b>Mobile Verification: </b> If mobile verification is unverified then a verification
+                      code will be sent to the client's mobile if he/she tries to login and need to be verified by that
+                      code.
+
+                      <br>
+                      <br> 
+
+                      <b>2FA Verification: </b> This will be enabled if the client enables the 2FA security from their
+                      client panel. If this is enabled the client needs to verify the code from his google authentication
+                      app to get access to his client panel.
+
+                      <br>
+                      <br>
+
+                      <b>KYC: </b> If KYC is unverified, the client needs to submit the information configured from the
+                      <em class="text-primary fw-bold">KYC Setting</em>.
+
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/user_details.png" alt="image" class="img-fluid">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="payments" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Payments</h5>
+                  <span class="doc-head__sub-title">Payments Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Payments</b> menu, the admin can see the payment history and details. If a payment is
+                      done by
+                      a manual payment gateway, then its status will be pending at first. Admin can approve or reject
+                      the pending payments from the details page.
+                    </p>
+
+                    <p>
+                      Admin is able to filter the payment history by date, date to date, and username or
+                      transaction number.
+                    </p>
+
+                    <p>
+                      From the search field, the admin can search the payment data by <b>Transaction Number</b> or
+                      <b>username</b> of the user.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/deposits.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="payment-gateways" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Payment Gateways</h5>
+                  <span class="doc-head__sub-title">Payment Gateways Overview</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-12">
+                  <div class="doc-body h-auto">
+                    <p>
+                      We have two types of payment gateways like <b>Automatic Gateways </b> and <b>Manual Gateways </b>.
+                    </p>
+
+                    <p>
+                      <b>Automatic Gateways</b>: We have added 25+ automatic gateways in this system. Admin just need to
+                      configure with valid credentials. If the clients deposit money by automatic gateway, admin doesn't
+                      need to approve.
+                    </p>
+
+                    <p>
+                      <b>Manual Gateways</b>: Admin can add manual gateways as he/she want. If the clients deposit money
+                      by automatic gateway, admin need to approve.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="support-tickets" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Support Ticket</h5>
+                  <span class="doc-head__sub-title">Support Ticket Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Support Ticket</b> menu, admin can manage all support tickets opened by the clients.
+                      Admin is able to reply or close a ticket from its details page.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/support_tickets.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="reports" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Report</h5>
+                  <span class="doc-head__sub-title">Report Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Report</b> menu, admin can see the Transaction Log, Login History and the Notification
+                      History.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/reports.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="subscribers" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Subscribers</h5>
+                  <span class="doc-head__sub-title">
+                    Subscribers Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Anyone can subscribe from the frontend of the website of this system. Admin can send emails
+                      to subscribers for promotional purposes or any other notices.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/subscribers.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="genearal-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">General Setting</h5>
+                  <span class="doc-head__sub-title">
+                    General Settings Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can set the basic information from the general setting.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Site Title:</strong> The name of your website.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Currency:</strong> The base currency of your system.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Currency Symbol:</strong> The symbol of the base currency.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Time Zone:</strong> Timezone of your application.
+                        </p>
+
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Base Color:</strong> The base color of your website/frontend.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Invoice Starting:</strong> Invoice starting number.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Invoice Incrementation:</strong> Invoice incrementation number.
+                        </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/general_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="logo-favicon" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Logo Favicon</h5>
+                  <span class="doc-head__sub-title">
+                    Logo Favicon Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      Admin can change the logo and favicon from here.
+                    </p>
+
+                    <p>
+                      If the logo and favicon are not changed after you update from this page, please clear the cache
+                      from your browser. As we keep the filename the same after the update, it may show the old image
+                      for the cache. usually, it works after clear the cache but if you still see the old logo or
+                      favicon, it may be caused by server level or network level caching. Please clear them too.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/logo_favicon.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="system-config" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">System Configuration</h5>
+                  <span class="doc-head__sub-title">
+                    System Configuration Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the System configuration menu admin can control the settings and modules of the system like
+                      Client/Account registration, Forcing clients to set secure password, KYC Verification, Email
+                      Verification, Mobile Verification, SMS Notification, Email Notification, Deposit Module, Auto Domain Register, and more.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/system_configuration.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="kyc-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">KYC Setting</h5>
+                  <span class="doc-head__sub-title">
+                    KYC Setting Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      From the KYC Setting Menu admin can make the KYC form for client as he want.
+                    </p>
+
+                    <p>
+                      KYC (Know Your Customer) is an important features in this system. Admin may need to verify the
+                      Client/Account holder by several documents like Passport, Driving License, National Identity Card,
+                      etc. <br>
+                      Admin can add fields by clicking on the <b>Add New</b> button.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/kyc_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="extensions" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Extensions</h5>
+                  <span class="doc-head__sub-title">
+
+                    Extensions Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Extensions are some third-party plugins we have used you can configure them from here.
+                    </p>
+
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Custom Captcha:</strong> To test the human identity of the visitors a randomly
+                          generated sequence of letters and/or numbers appears as an image. This custom captcha is
+                          enabled, the captcha will appear in every form on the website and visitors need to prove their
+                          human identity by submitting the exact text in the captcha image.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Google Recaptcha 2:</strong>reCAPTCHA is a free service from Google that helps protect
+                          websites from spam and abuse. A “CAPTCHA” is a turing test to tell human and bots apart.
+
+                          <br>
+                          <br>
+                          We prefer to use Google Captcha over Custom Captcha.
+                          <br>
+                          <br>
+                          Get the Site Key and Secret Key from <a
+                            href="https://developers.google.com/recaptcha/docs/display" target="_blank">here</a>
+                          <br>
+                          <br>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Google Analytics:</strong> Google Analytics is a web analytics service that provides
+                          statistics and basic analytical tools for search engine optimization (SEO) and marketing
+                          purposes. The service is part of the Google Marketing Platform and is available for free to
+                          anyone with a Google account.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Tawk.to:</strong> <a href="https://www.tawk.to/" target="_blank">Twak To</a> is a chat
+                          tool​​ It's a powerful free web chat tool that makes it easy for customers to message you
+                          through your website.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Facebook Comment:</strong> Facebook comment is used to manage blog's comments of our system. If you enable this, a facebook comment box will be shown in blog page.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/extensions.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="language-manager" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Language Manager</h5>
+                  <span class="doc-head__sub-title">
+
+                    Language Manager Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      As our system is multilingual, the admin can add multiple languages from here. Admin needs to add
+                      keywords in English as the system has, and needs to translate them into the language he/she wants
+                      to translate.
+                      As our system is multilingual, the admin can add multiple languages from here. Admin needs to add
+                      keywords in English as the system has, and needs to translate them into the language he/she wants
+                      to translate.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/language_manager.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-xl-6">
+                    <div class="doc-body h-auto">
+                      <h5>How to translate?</h5>
+                      <p>
+                        <b>Add Keywords:</b> Admin need to add the words/sentences as the system has. After clicking on
+                        the Add New Keyword button a pop window wll open and put the english word/sentence in the key
+                        field and add put the translated text on the value.
+                      </p>
+
+                      <p>
+                        <b>Edit Keywords:</b> Admin is able to update the translated text of a keyword.
+                      </p>
+
+                      <p>
+                        <b>Import Keywords:</b> Admin can import keywords from one language to another language. If you
+                        import keywords from another language then previous keywords and translated text will be
+                        removed.
+                      </p>
+
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="doc-body--alt t-center">
+                      <img src="assets/images/language_add_key.png" alt="image" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="seo-manager" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    SEO Manager</h5>
+                  <span class="doc-head__sub-title">
+
+                    SEO Manager Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can add seo contents from the SEO Manager menu.
+                    </p>
+
+                    <p>
+                      <b>Meta Keywords:</b> Meta keywords are meta tags that you can use to give search engines more
+                      information about a page's content. They're found in a webpage's HTML source code, and are not
+                      visible to visitors.
+                    </p>
+
+                    <p>
+                      <b>Meta Description:</b> A meta description tag generally informs and interests users with a
+                      short, relevant summary of what a particular page is about.
+                    </p>
+
+                    <p>
+                      <b>Social Title:</b> The social title is how you define your content's title.
+                    </p>
+
+                    <p>
+                      <b>Social Description:</b> This description controls how the link will be described when it shows
+                      up in
+                      someone's feed.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/seo.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="notification-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Notification Setting</h5>
+                  <span class="doc-head__sub-title">
+
+                    Notification Setting Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Notification Setting > Global Template</h6>
+                    <p>
+                      Global Template is the template for all email.
+                      From the Global Template, the admin is able to update the email template. We have provided a
+                      template as a demo.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/global_template.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Notification Setting > Email Setting</h6>
+                    <p>
+                      From the Email Setting menu, the admin can configure the email sending method. We have several
+                      email-sending methods like PHP Mail, SMTP, SendGrid API, and Mailjet API.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/email_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h6>Notification Setting > SMS Setting</h6>
+                    <p>
+                      From the SMS Setting menu, the admin can configure the SMS sending method. We have several SMS
+                      sending methods like Clickatell, Infobip, Message Bird, Nexmo, Sms Broadcast, Twilio, Text Magic,
+                      and Custom API.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/sms_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-section" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">
+                    Manage Section</h5>
+                  <span class="doc-head__sub-title">
+
+                    Manage Section Overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      All pages in the website/frontend have several sections and sections contain content like text,
+                      images, and icons. Admin is able to add/update the contents from this menu.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_section.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery library -->
+    <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- bootstrap 5 js -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Simplebar Js  -->
+    <script src="assets/js/lib/simplebar.js"></script>
+    <!-- main js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
