@@ -3,7 +3,7 @@
 @section('app')
 
     @stack('fbComment')
-    
+
     @include($activeTemplate.'partials.header')
 
     @include($activeTemplate.'partials.breadcrumb')
@@ -13,7 +13,7 @@
     @include($activeTemplate.'partials.footer')
 
     @include($activeTemplate.'partials.subscribe')
-    
+
     <x-cookie-policy />
-@endsection 
- 
+@endsection
+

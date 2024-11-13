@@ -1,7 +1,7 @@
 @php
     $footer = @getContent('footer.content', true);
     $policyPages = @getContent('policy_pages.element', orderById:true);
-@endphp 
+@endphp
 
 <!-- Footer Section -->
 <footer class="py-4 footer bg-dark-two">
@@ -10,16 +10,16 @@
             <a href="{{ route('home') }}" class="logo mb-3">
                 <img src="{{getImage(getFilePath('logoIcon') .'/logo.png')}}" alt="@lang('logo')">
             </a>
-            <p class="footer-text mx-auto">
-                {{ __(@$footer->data_values->description) }}
-            </p>
+{{--            <p class="footer-text mx-auto">--}}
+{{--                {{ __(@$footer->data_values->description) }}--}}
+{{--            </p>--}}
             <ul class="footer-links d-flex flex-wrap gap-3 justify-content-center mt-3 mb-3">
                 <li><a href="{{ route('home') }}" class="anchor-decoration text--base">@lang('Home')</a></li>
 
                 <li><a href="{{ route('blogs') }}" class="anchor-decoration text--base">@lang('Announcements')</a></li>
                 @foreach($policyPages as $policyPage)
                     <li>
-                        <a href="{{ route('policy.pages', ['slug'=>slug($policyPage->data_values->title), 'id'=>$policyPage->id]) }}" 
+                        <a href="{{ route('policy.pages', ['slug'=>slug($policyPage->data_values->title), 'id'=>$policyPage->id]) }}"
                             class="anchor-decoration text--base"
                         >
                             {{ __(@$policyPage->data_values->title) }}
