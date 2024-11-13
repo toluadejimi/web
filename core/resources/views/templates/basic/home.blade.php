@@ -348,7 +348,7 @@
                         <div class="domain__form">
                             <div id="nav-tabcontent" class="tab-content">
                                 <div id="register" class="tab-pane fade active show" role="tabpanel">
-                                    <form action="index-six.html#" class="domain__search d-flex">
+                                    <form action="http://mydevhost.com/register/domain" class="domain__search d-flex">
                                         <input type="text" placeholder="Enter domain name" required>
                                         <select name="r" id="r">
                                             <option value=".com">.com</option>
