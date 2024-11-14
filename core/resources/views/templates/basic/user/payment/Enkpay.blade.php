@@ -39,11 +39,11 @@
         function payWithRave() {
             var x = getpaidSetup({
                 PBFPubKey: API_publicKey,
-                customer_email: "{{$data->customer_email}}",
-                amount: "{{$data->amount }}",
-                customer_phone: "{{$data->customer_phone}}",
-                currency: "{{$data->currency}}",
-                txref: "{{$data->txref}}",
+                customer_email: "{{$data->customer_email ?? Auth::user()->email}} ",
+                amount: "{{$data->amount ?? $deposit->final_amo }}",
+                customer_phone: "{{$data->customer_phone ?? Auth::user()->phone}}",
+                currency: "{{$data->currency ?? "NGN"}}",
+                txref: "{{$data->txref ?? "12922929"}}",
                 onclose: function () {
                 },
                 callback: function (response) {
