@@ -15,10 +15,6 @@
                                     @lang('You have to pay ')
                                     <strong>{{showAmount($deposit->final_amo)}} {{__($deposit->method_currency)}}</strong>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    @lang('You will get ')
-                                    <strong>{{showAmount($deposit->amount)}}  {{__($general->cur_text)}}</strong>
-                                </li>
                             </ul>
                             <button type="button" class="btn btn--base w-100 mt-4" id="btn-confirm" onClick="payWithRave()">@lang('Pay Now')</button>
                         </div>
@@ -27,37 +23,33 @@
             </div>
         </div>
     </div>
+
+
+    <div id="iframeContainer"></div>
+
+
 @endsection
 
 @push('script')
-    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+
+
     <script>
-        "use strict"
-        var btn = document.querySelector("#btn-confirm");
-        btn.setAttribute("type", "button");
-        const API_publicKey = " ";
-        function payWithRave() {
-            var x = getpaidSetup({
-                PBFPubKey: API_publicKey,
-                customer_email: "{{$data->customer_email ?? Auth::user()->email}} ",
-                amount: "{{$data->amount ?? $deposit->final_amo }}",
-                customer_phone: "{{$data->customer_phone ?? Auth::user()->phone}}",
-                currency: "{{$data->currency ?? "NGN"}}",
-                txref: "{{$data->txref ?? "12922929"}}",
-                onclose: function () {
-                },
-                callback: function (response) {
-                    var txref = response.tx.txRef;
-                    var status = response.tx.status;
-                    var chargeResponse = response.tx.chargeResponseCode;
-                    if (chargeResponse == "00" || chargeResponse == "0") {
-                        window.location = '{{ url('ipn/flutterwave') }}/' + txref + '/' + status;
-                    } else {
-                        window.location = '{{ url('ipn/flutterwave') }}/' + txref + '/' + status;
-                    }
-                    // x.close(); // use this to close the modal immediately after payment.
-                }
-            });
+
+        function openIframe() {
+            // URL to be loaded in the iframe
+            const url = "https://web.sprintpay.online/pay?amount={{$deposit->final_amo}}&key=23340906095959495&ref={{random_int(000000000, 999999999)}}&email={{Auth::user()->email}}";
+
+            // Create iframe element
+            const iframe = document.createElement("iframe");
+            iframe.src = url;
+            iframe.width = "600";
+            iframe.height = "400";
+            iframe.style.border = "none";
+
+            // Append iframe to container
+            const container = document.getElementById("iframeContainer");
+            container.innerHTML = ""; // Clear any existing iframes
+            container.appendChild(iframe);
         }
     </script>
 @endpush
