@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Gateway\Authorize;
+namespace App\Http\Controllers\Gateway\Enkpay;
 
 use App\Models\Deposit;
 use App\Http\Controllers\Gateway\PaymentController;
