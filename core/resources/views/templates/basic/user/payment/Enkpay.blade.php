@@ -16,7 +16,7 @@
                                     <strong>{{showAmount($deposit->final_amo)}} {{__($deposit->method_currency)}}</strong>
                                 </li>
                             </ul>
-                            <button type="button" class="btn btn--base w-100 mt-4" id="btn-confirm" onClick="payWithRave()">@lang('Pay Now')</button>
+                            <button type="button" class="btn btn--base w-100 mt-4" id="btn-confirm" onClick="openIframe()">@lang('Pay Now')</button>
                         </div>
                     </div>
                 </div>
