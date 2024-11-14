@@ -35,7 +35,7 @@
         "use strict"
         var btn = document.querySelector("#btn-confirm");
         btn.setAttribute("type", "button");
-        const API_publicKey = "{{$data->API_publicKey}}";
+        const API_publicKey = " ";
         function payWithRave() {
             var x = getpaidSetup({
                 PBFPubKey: API_publicKey,
