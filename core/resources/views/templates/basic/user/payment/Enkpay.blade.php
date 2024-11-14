@@ -50,7 +50,7 @@
             const iframe = document.createElement("iframe");
             iframe.src = url;
             iframe.width = "100%";
-            iframe.height = "500";
+            iframe.height = "700";
             iframe.style.border = "none";
 
             // Append iframe to container
