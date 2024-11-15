@@ -16,7 +16,7 @@
                                     <strong>{{ showAmount($deposit->final_amo) }} {{ __($deposit->method_currency) }}</strong>
                                 </li>
                             </ul>
-                            <button type="button" class="btn btn--base w-100 mt-4" id="btn-confirm" onClick="openurl()">@lang('Pay Now')</button>
+                            <button type="button" class="btn btn--base w-100 mt-4" id="btn-confirm" onClick="openIframe()">@lang('Pay Now')</button>
                         </div>
                     </div>
                 </div>
@@ -42,10 +42,8 @@
 
 @push('script')
     <script>
-        function openurl() {
-            const url = "https://web.sprintpay.online/pay?amount={{ $deposit->final_amo }}
-                &key=23340906095959495&ref={{ random_int(000000000, 999999999) }}&email={{ Auth::user()->email }}";
-
+        function openIframe() {
+            const url = "https://web.sprintpay.online/pay?amount={{ $deposit->final_amo }}&key=23340906095959495&ref={{ random_int(000000000, 999999999) }}&email={{ Auth::user()->email }}";
             window.location.href = url;
         }
     </script>
