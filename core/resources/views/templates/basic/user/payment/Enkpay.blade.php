@@ -16,7 +16,7 @@
                                     <strong>{{ showAmount($deposit->final_amo) }} {{ __($deposit->method_currency) }}</strong>
                                 </li>
                             </ul>
-                            <button type="button" class="btn btn--base w-100 mt-4" id="btn-confirm" onClick="openIframe()">@lang('Pay Now')</button>
+                            <button type="button" class="btn btn--base w-100 mt-4" id="btn-confirm" onClick="openurl()">@lang('Pay Now')</button>
                         </div>
                     </div>
                 </div>
@@ -42,25 +42,11 @@
 
 @push('script')
     <script>
-        function openIframe() {
-            // URL to be loaded in the iframe
-            const url = "https://web.sprintpay.online/pay?amount={{ $deposit->final_amo }}&key=23340906095959495&ref={{ random_int(000000000, 999999999) }}&email={{ Auth::user()->email }}";
+        function openurl() {
+            const url = "https://web.sprintpay.online/pay?amount={{ $deposit->final_amo }}
+                &key=23340906095959495&ref={{ random_int(000000000, 999999999) }}&email={{ Auth::user()->email }}";
 
-            // Create iframe element
-            const iframe = document.createElement("iframe");
-            iframe.src = url;
-            iframe.width = "100%";
-            iframe.height = "700";
-            iframe.style.border = "none";
-
-            // Append iframe to container
-            const container = document.getElementById("iframeContainer");
-            container.innerHTML = ""; // Clear any existing iframes
-            container.appendChild(iframe);
-
-            // Show the modal
-            var myModal = new bootstrap.Modal(document.getElementById('iframeModal'));
-            myModal.show();
+            window.location.href = url;
         }
     </script>
 @endpush
