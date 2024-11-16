@@ -7,6 +7,7 @@ use App\Models\AdminNotification;
 use App\Models\Deposit;
 use App\Http\Controllers\Gateway\PaymentController;
 use App\Http\Controllers\Controller;
+use App\Models\Invoice;
 use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -66,13 +67,15 @@ class ProcessController extends Controller
         if($status == "paid"){
 
             $ck_status = Deposit::where('ref', $request->ref)->first()->status;
+            $order_id = Deposit::where('ref', $request->ref)->first()->order_id;
+
 
             if($ck_status != 1) {
-
 
                 Deposit::where('ref', $request->ref)->update(['status' => 1]);
                 $deposit = Deposit::where('ref', $request->ref)->first();
 
+                Invoice::where('order_id', $order_id)->update(['status' => 1]);
 
                 $user = User::find($deposit->user_id);
                 $user->balance += $deposit->amount;
@@ -107,11 +110,6 @@ class ProcessController extends Controller
                     'post_balance' => showAmount($user->balance)
                 ]);
 
-                $invoice = @$deposit->invoice;
-                if (@$invoice) {
-                    $afterPayment = new AfterPayment();
-                    $afterPayment->pay($invoice);
-                }
 
 
                 $notify[] = ['success', 'Payment captured successfully'];
