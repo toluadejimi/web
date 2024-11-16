@@ -116,7 +116,7 @@ class NotificationController extends Controller
            'email' => 'required|email'
        ]);
 
-       $general = gs();
+       $general = GeneralSetting::where('id', 1)->first() ?? null;
        $config = $general->mail_config;
        $receiverName = explode('@', $request->email)[0];
        $subject = strtoupper($config->name).' Configuration Success';
