@@ -64,24 +64,30 @@ class ProcessController extends Controller
         $status = $var ?? null;
 
         if($status == "paid"){
-            Deposit::where('ref', $request->ref)->update(['status' => 1]);
-            $deposit = Deposit::where('ref', $request->ref)->first();
+
+            $ck_status = Deposit::where('ref', $request->ref)->first()->status;
+
+            if($ck_status != 1) {
 
 
-            $user = User::find($deposit->user_id);
-            $user->balance += $deposit->amount;
-            $user->save();
+                Deposit::where('ref', $request->ref)->update(['status' => 1]);
+                $deposit = Deposit::where('ref', $request->ref)->first();
 
-            $transaction = new Transaction();
-            $transaction->user_id = $deposit->user_id;
-            $transaction->amount = $deposit->amount;
-            $transaction->post_balance = $user->balance;
-            $transaction->charge = $deposit->charge;
-            $transaction->trx_type = '+';
-            $transaction->details = 'Deposit Via ' . $deposit->gatewayCurrency()->name;
-            $transaction->trx = $deposit->trx;
-            $transaction->remark = 'deposit';
-            $transaction->save();
+
+                $user = User::find($deposit->user_id);
+                $user->balance += $deposit->amount;
+                $user->save();
+
+                $transaction = new Transaction();
+                $transaction->user_id = $deposit->user_id;
+                $transaction->amount = $deposit->amount;
+                $transaction->post_balance = $user->balance;
+                $transaction->charge = $deposit->charge;
+                $transaction->trx_type = '+';
+                $transaction->details = 'Deposit Via ' . $deposit->gatewayCurrency()->name;
+                $transaction->trx = $deposit->trx;
+                $transaction->remark = 'deposit';
+                $transaction->save();
 
                 $adminNotification = new AdminNotification();
                 $adminNotification->user_id = $user->id;
@@ -90,28 +96,33 @@ class ProcessController extends Controller
                 $adminNotification->save();
 
 
+                notify($user, 'DEPOSIT_COMPLETE', [
+                    'method_name' => $deposit->gatewayCurrency()->name,
+                    'method_currency' => $deposit->method_currency,
+                    'method_amount' => showAmount($deposit->final_amo),
+                    'amount' => showAmount($deposit->amount),
+                    'charge' => showAmount($deposit->charge),
+                    'rate' => showAmount($deposit->rate),
+                    'trx' => $deposit->trx,
+                    'post_balance' => showAmount($user->balance)
+                ]);
 
-            notify($user,  'DEPOSIT_COMPLETE', [
-                'method_name' => $deposit->gatewayCurrency()->name,
-                'method_currency' => $deposit->method_currency,
-                'method_amount' => showAmount($deposit->final_amo),
-                'amount' => showAmount($deposit->amount),
-                'charge' => showAmount($deposit->charge),
-                'rate' => showAmount($deposit->rate),
-                'trx' => $deposit->trx,
-                'post_balance' => showAmount($user->balance)
-            ]);
+                $invoice = @$deposit->invoice;
+                if (@$invoice) {
+                    $afterPayment = new AfterPayment();
+                    $afterPayment->pay($invoice);
+                }
 
-            $invoice = @$deposit->invoice;
-            if (@$invoice){
-                $afterPayment = new AfterPayment();
-                $afterPayment->pay($invoice);
+
+                $notify[] = ['success', 'Payment captured successfully'];
+                return back()->withNotify($notify);
+
+            }else{
+                $notify[] = ['error', 'Payment has already been captured'];
+                return back()->withNotify($notify);
             }
 
 
-
-            $notify[] = ['success', 'Payment captured successfully'];
-            return back()->withNotify($notify);
         }else{
             $notify[] = ['error','Something went wrong'];
             return to_route(gatewayRedirectUrl())->withNotify($notify);
