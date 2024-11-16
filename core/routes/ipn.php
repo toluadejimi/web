@@ -32,5 +32,7 @@ Route::post('now-payments-checkout', 'NowPaymentsCheckout\ProcessController@ipn'
 Route::post('2checkout', 'TwoCheckout\ProcessController@ipn')->name('TwoCheckout');
 Route::any('checkout', 'Checkout\ProcessController@ipn')->name('Checkout');
 Route::any('enkpay', 'Enkpay\ProcessController@ipn')->name('Enkpay');
+Route::any('verify', 'Enkpay\ProcessController@verify')->name('verify');
+
 
 
