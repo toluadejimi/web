@@ -66,7 +66,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|unique:users',
             'mobile' => 'required|integer',
             'password' => ['required','confirmed',$passwordValidation],
-            'username' => 'required|alpha_num|unique:users|min:6',
+            'username' => 'required|alpha_num|unique:users',
             'captcha' => 'sometimes|required',
             'mobile_code' => 'required|in:'.$mobileCodes,
             'country_code' => 'required|in:'.$countryCodes,
