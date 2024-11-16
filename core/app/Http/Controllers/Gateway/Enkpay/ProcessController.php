@@ -67,7 +67,7 @@ class ProcessController extends Controller
         if($status == "paid"){
 
             $ck_status = Deposit::where('trx', $request->ref)->first()->status;
-            $order_id = Deposit::where('trx', $request->ref)->first()->invoice_id;
+            $invoice_id = Deposit::where('trx', $request->ref)->first()->invoice_id;
 
 
             if($ck_status != 1) {
