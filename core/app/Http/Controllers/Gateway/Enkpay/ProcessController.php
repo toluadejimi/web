@@ -113,11 +113,11 @@ class ProcessController extends Controller
 
 
                 $notify[] = ['success', 'Payment captured successfully'];
-                return back()->withNotify($notify);
+                return redirect("/user/invoice/view/$invoice_id")->withNotify($notify);
 
             }else{
                 $notify[] = ['error', 'Payment has already been captured'];
-                return back()->withNotify($notify);
+                return redirect("/user/dashboard")->withNotify($notify);
             }
 
 
