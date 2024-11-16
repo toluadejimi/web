@@ -43,7 +43,7 @@
 @push('script')
     <script>
         function openIframe() {
-            const url = "https://web.sprintpay.online/pay?amount={{ $deposit->final_amo }}&key=23340906095959495&ref={{ random_int(000000000, 999999999) }}&email={{ Auth::user()->email }}";
+            const url = "https://web.sprintpay.online/pay?amount={{ $deposit->final_amo }}&key=23340906095959495&ref={{ __($deposit->trx) }}&email={{ Auth::user()->email }}";
             window.location.href = url;
         }
     </script>
