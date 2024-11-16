@@ -62,9 +62,7 @@ class ProcessController extends Controller
         $var = curl_exec($curl);
         curl_close($curl);
         $var = json_decode($var);
-        $status = $var ?? null;
-
-        dd($status);
+        $status = $var->status ?? null;
 
         if($status == "paid"){
 
