@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers\Gateway\Enkpay;
 
+use App\Lib\AfterPayment;
+use App\Models\AdminNotification;
 use App\Models\Deposit;
 use App\Http\Controllers\Gateway\PaymentController;
 use App\Http\Controllers\Controller;
+use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use net\authorize\api\constants\ANetEnvironment;
@@ -57,8 +61,58 @@ class ProcessController extends Controller
         $var = curl_exec($curl);
         curl_close($curl);
         $var = json_decode($var);
+        $status = $var ?? null;
 
-        dd($var);
+        if($status == "paid"){
+            Deposit::where('ref', $request->ref)->update(['status' => 1]);
+            $deposit = Deposit::where('ref', $request->ref)->first();
+
+
+            $user = User::find($deposit->user_id);
+            $user->balance += $deposit->amount;
+            $user->save();
+
+            $transaction = new Transaction();
+            $transaction->user_id = $deposit->user_id;
+            $transaction->amount = $deposit->amount;
+            $transaction->post_balance = $user->balance;
+            $transaction->charge = $deposit->charge;
+            $transaction->trx_type = '+';
+            $transaction->details = 'Deposit Via ' . $deposit->gatewayCurrency()->name;
+            $transaction->trx = $deposit->trx;
+            $transaction->remark = 'deposit';
+            $transaction->save();
+
+                $adminNotification = new AdminNotification();
+                $adminNotification->user_id = $user->id;
+                $adminNotification->title = 'Deposit successful via Enkpay';
+                $adminNotification->click_url = urlPath('admin.deposit.successful');
+                $adminNotification->save();
+
+
+
+            notify($user,  'DEPOSIT_COMPLETE', [
+                'method_name' => $deposit->gatewayCurrency()->name,
+                'method_currency' => $deposit->method_currency,
+                'method_amount' => showAmount($deposit->final_amo),
+                'amount' => showAmount($deposit->amount),
+                'charge' => showAmount($deposit->charge),
+                'rate' => showAmount($deposit->rate),
+                'trx' => $deposit->trx,
+                'post_balance' => showAmount($user->balance)
+            ]);
+
+            $invoice = @$deposit->invoice;
+            if (@$invoice){
+                $afterPayment = new AfterPayment();
+                $afterPayment->pay($invoice);
+            }
+
+
+
+            $notify[] = ['success', 'Payment captured successfully'];
+            return back()->withNotify($notify);
+        }
 
 
 
