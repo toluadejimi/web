@@ -112,6 +112,9 @@ class ProcessController extends Controller
 
             $notify[] = ['success', 'Payment captured successfully'];
             return back()->withNotify($notify);
+        }else{
+            $notify[] = ['error','Something went wrong'];
+            return to_route(gatewayRedirectUrl())->withNotify($notify);
         }
 
 
