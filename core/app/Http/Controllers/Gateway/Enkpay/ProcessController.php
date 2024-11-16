@@ -64,6 +64,8 @@ class ProcessController extends Controller
         $var = json_decode($var);
         $status = $var ?? null;
 
+        dd($status);
+
         if($status == "paid"){
 
             $ck_status = Deposit::where('ref', $request->ref)->first()->status;
