@@ -70,6 +70,8 @@ class ProcessController extends Controller
             $order_id = Deposit::where('ref', $request->ref)->first()->order_id;
 
 
+            dd($order_id, $ck_status);
+
             if($ck_status != 1) {
 
                 Deposit::where('ref', $request->ref)->update(['status' => 1]);
