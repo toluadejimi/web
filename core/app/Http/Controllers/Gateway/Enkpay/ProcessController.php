@@ -77,28 +77,15 @@ class ProcessController extends Controller
 
                 Invoice::where('id', $invoice_id)->update(['status' => 1]);
 
-                $user = User::find($deposit->user_id);
-                $user->balance += $deposit->amount;
-                $user->save();
-
-                $transaction = new Transaction();
-                $transaction->user_id = $deposit->user_id;
-                $transaction->amount = $deposit->amount;
-                $transaction->post_balance = $user->balance;
-                $transaction->charge = $deposit->charge;
-                $transaction->trx_type = '+';
-                $transaction->details = 'Deposit Via ' . $deposit->gatewayCurrency()->name;
-                $transaction->trx = $deposit->trx;
-                $transaction->remark = 'deposit';
-                $transaction->save();
 
                 $adminNotification = new AdminNotification();
-                $adminNotification->user_id = $user->id;
+                $adminNotification->user_id = $deposit->user_id;
                 $adminNotification->title = 'Deposit successful via Enkpay';
                 $adminNotification->click_url = urlPath('admin.deposit.successful');
                 $adminNotification->save();
 
 
+                $user = User::where('id', $deposit->user_id)->first();
                 notify($user, 'DEPOSIT_COMPLETE', [
                     'method_name' => $deposit->gatewayCurrency()->name,
                     'method_currency' => $deposit->method_currency,
