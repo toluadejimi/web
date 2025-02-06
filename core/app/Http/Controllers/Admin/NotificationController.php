@@ -122,8 +122,6 @@ class NotificationController extends Controller
        $subject = strtoupper($config->name).' Configuration Success';
        $message = 'Your email notification setting is configured successfully for '.$general->site_name;
 
-       dd($general);
-
        if ($general->en) {
            $user = [
                'username'=>$request->email,
