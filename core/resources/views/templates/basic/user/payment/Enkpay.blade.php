@@ -24,7 +24,6 @@
         </div>
     </div>
 
-    <!-- Modal for iframe -->
     <div class="modal fade" id="iframeModal" tabindex="-1" aria-labelledby="iframeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
